@@ -1,0 +1,50 @@
+import React, { useState } from "react";
+import { css } from "emotion";
+
+const Card = () => {
+  const [background, setBackground] = useState("#fdfdfd");
+
+  const [font, setFont] = useState("#424246");
+
+  const setStyle = (background, font) => {
+    setBackground(background);
+    setFont(font);
+  };
+
+  
+
+  return (
+    <div className={card}>
+      <h1>Your Life is Your Message</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar sed
+        elementum egestas blandit. Proin augue lacus, phasellus vel lorem risus.
+      </p>
+      <div className={cardButtons}>
+        <div
+          onMouseEnter={() => setStyle("#424246", "#fdfdfd")}
+          onMouseOut={() => setStyle("#fdfdfd", "#424246")}
+          className={blackButton}
+        >
+          Black
+        </div>
+        <div
+          onMouseEnter={() => setStyle("#1d499b", "#fdfdfd")}
+          onMouseOut={() => setStyle("#fdfdfd", "#424246")}
+          className={blueButton}
+        >
+          Blue
+        </div>
+        <div
+          onMouseEnter={() => setStyle("#f9d648", "#424246")}
+          onMouseOut={() => setStyle("#fdfdfd", "#424246")}
+          className={yellowButton}
+        >
+          Yellow
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Card;
