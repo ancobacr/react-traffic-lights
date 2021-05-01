@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-//import { color } from "./ligths";
 
 export function TrafficLight() {
 	const [color, setColor] = useState("");
@@ -26,23 +25,7 @@ export function TrafficLight() {
 	);
 }
 
-{
-	/*const colors = {"red", "yellow", "green"};
-	const [lit, setLit] = setState("red");
-
-	//   const [color, setColor] = useState("red");
-
-	return (
-		<div className="container">
-			{colors.map(color => {
-				return <color color={color} lit={lit} setLit={setLit} />;
-			})}
-		</div>
-	);
-}
-
-
-/* 
+{/* 
 color a set setColor
 
 <ligh valor:color onClick: setColor({color})>
@@ -74,7 +57,5 @@ importar elemento
 
 css:
 div red[
-    backcolor... tal
-]
-*/
-}
+    backcolor... tal]
+*/}
