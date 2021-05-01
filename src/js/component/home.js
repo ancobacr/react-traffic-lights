@@ -1,9 +1,33 @@
 import React, { useState } from "react";
-import { Lights } from "./ligths";
-//create your first component
+//import { color } from "./ligths";
 
-export function Home() {
-	const colors = {"red", "yellow", "green"};
+export function TrafficLight() {
+	const [color, setColor] = useState("");
+
+	return (
+		<div>
+			<div className="container">
+				<div
+					className={color === "green" ? "light greenLight" : "light"}
+					id="green"
+					onClick={() => setColor("green")}></div>
+				<div
+					className={
+						color === "yellow" ? "light yellowLight" : "light"
+					}
+					id="yellow"
+					onClick={() => setColor("yellow")}></div>
+				<div
+					className={color === "red" ? "light redLight" : "light"}
+					id="red"
+					onClick={() => setColor("red")}></div>
+			</div>
+		</div>
+	);
+}
+
+{
+	/*const colors = {"red", "yellow", "green"};
 	const [lit, setLit] = setState("red");
 
 	//   const [color, setColor] = useState("red");
@@ -11,7 +35,7 @@ export function Home() {
 	return (
 		<div className="container">
 			{colors.map(color => {
-				return <Lights color={color} lit={lit} setLit={setLit} />;
+				return <color color={color} lit={lit} setLit={setLit} />;
 			})}
 		</div>
 	);
@@ -52,4 +76,5 @@ css:
 div red[
     backcolor... tal
 ]
-
+*/
+}
